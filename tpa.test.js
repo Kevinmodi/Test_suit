@@ -93,19 +93,6 @@ Object.keys(configjson).forEach(function (key) {
         })
     };
 
-    // var config7 = {
-    //     method: 'Post',
-    //     url: `${process.env.testenvurl}${url[0]}`,
-    //     headers: {
-    //         'x-api-key': 'l7xxac117ccf8a494eb9a7ebee2c6cff3a8d',
-    //        // 'Authorization': ' ',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     data: JSON.stringify({
-    //         "testdata": "testdata"
-    //     })
-    // };
-
 
     // test(`IP Whitelisting Check for URL ${process.env.testenvurl}${url[0]}`, async () => {
     //     try {

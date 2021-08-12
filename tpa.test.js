@@ -6,6 +6,7 @@ var configjson = JSON.parse(process.env.apikeys)
 Object.keys(configjson).forEach(function (key) {
     const url = key.split("+")
     // console.log(url[0]);
+    
     var config = {          //SQL injection
         method: 'Post',
         url: `${process.env.testenvurl}${url[0]}`,
@@ -30,7 +31,7 @@ Object.keys(configjson).forEach(function (key) {
         })
     };
 
-    var config2 = {
+    var config2 = {           //API key not provided
         method: 'Post',
         url: `${process.env.testenvurl}${url[0]}`,
         headers: {
@@ -42,7 +43,7 @@ Object.keys(configjson).forEach(function (key) {
         })
     };
 
-    var config3 = {
+    var config3 = {             //Invalid API key
         method: 'Post',
         url: `${process.env.testenvurl}${url[0]}`,
         headers: {
@@ -54,7 +55,7 @@ Object.keys(configjson).forEach(function (key) {
         })
     };
 
-    var config4 = {
+    var config4 = {             //for backend reachability,context switching,Token not provided
         method: 'Post',
         url: `${process.env.testenvurl}${url[0]}`,
         headers: {
@@ -66,7 +67,7 @@ Object.keys(configjson).forEach(function (key) {
         })
     };
 
-    // var config5 = {
+    // var config5 = {              //IP White listing
     //     method: 'Post',
     //     url: `${process.env.testenvurl}${url[0]}`,
     //     headers: {
@@ -79,7 +80,7 @@ Object.keys(configjson).forEach(function (key) {
     //     })
     // };
 
-    var config6 = {
+    var config6 = {             // Invalid Token
         method: 'Post',
         url: `${process.env.testenvurl}${url[0]}`,
         headers: {
